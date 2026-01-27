@@ -138,7 +138,7 @@ nav ul li{
 }
 
 .team3{
-    background-image: url('/assets/imagens/team.png');
+    background-image: url('/myprojectsOnly/agenciaRH/assets/imagens/team.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -231,6 +231,32 @@ nav ul li{
 }
 
 .team5 p{
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #494949;
+}
+
+.team6 div{
+    background-color: #eee;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+}
+
+.team6 h2{
+     font-family: "Nunito", sans-serif;
+     font-size: 100px;
+     color: #2F2F2F;
+}
+.team6 h3{
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    color: #2F2F2F;
+}
+
+.team6 p{
     font-family: "Nunito", sans-serif;
     font-size: 16px;
     font-weight: 400;
