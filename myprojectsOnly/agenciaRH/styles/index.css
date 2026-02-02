@@ -136,18 +136,15 @@ button .size-6{
 
 
 .team2{
-    background-color: #4D0001;
-    padding: 5em 0px;
+    margin-bottom: 15%;
+    margin-top: 5%;
 }
 
 
 .teams{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 1000px;
-    margin: auto;
+    justify-content: space-between;
 }
 
 .alunos{
@@ -161,22 +158,36 @@ button .size-6{
 }
 
 .team2 h2{
+    color: #2F2F2F;
+    font-size: 50px;
+    margin-bottom: 20px ;
+}
+
+/* .team2 h2{
     font-family: "Nunito", sans-serif;
     font-size: 100px;
     color: #ffffff;
-}
+} */
 
 .team2 p{
+    font-size: 18px;
+    color: #5b5b5b;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    max-width: 600px;
+}
+
+/* .team2 p{
     font-family: "Nunito", sans-serif;
     font-size: 20px;
     color: #d0d0d0;
     max-width: 600px;
-}
+} */
 
 .vision{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .believe{
     margin: 5% 0px;
@@ -247,7 +258,7 @@ button .size-6{
 }
 
 .every{
-    max-width: 1000px;
+    max-width: 1300px;
     margin: auto;
 }
 
@@ -256,22 +267,166 @@ button .size-6{
     margin: auto;
 }
 
+.moreService{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.moreService .submore{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.moreService article{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #5b5b5b;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.moreService .size-6{
+    width: 20px;
+    color: #5b5b5b;
+    margin-top: 5px;
+    margin-left: 4px;
+}
+
+.team4 h2{
+    color: #2F2F2F;
+    font-size: 50px;
+}
+
 .team4 section{
     display: flex;
     flex-direction: row;
     align-items: start;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .team4 section div{
     width: 300px;
     height: 450px;
-    margin: 20px;
-    background-color: #eee;
+    margin: 10px;
+    background-color: #fdfdfd;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 5px;
 }
 
 .team4 img {
-    width: 300px;
+    width: 250px;
     height: 300px;
     object-fit: cover;
+    border-radius: 20px;
+}
+
+.team4 h5{
+    font-size: 20px;
+    color: #2F2F2F;
+    padding-left: 5px;
+}
+
+.team4 p{
+    font-size: 15px;
+    color: #5b5b5b;
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+.team4 span{
+    font-size: 15px;
+    color: #BF0B2C;
+    cursor: pointer;
+}
+
+.team5{
+    margin: 5% 0px;
+}
+
+.team5 .diferencias{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.team5 ul div{
+    margin-left:50px;
+    margin-bottom:50px;
+}
+.team5 h2{
+    color: #2F2F2F;
+    font-size: 50px;
+    margin-bottom: 20px ;
+}
+
+.team5 li{
+    text-transform: initial;
+    font-weight: 700;
+    list-style: none;
+    color: #2F2F2F;
+    cursor: pointer;
+}
+
+.team5 p{
+    font-size: 15px;
+    color: #5b5b5b;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    max-width: 500px;
+}
+
+.team5 img{
+    width: 300px;
+    border-radius: 20px;
+}
+
+.team6 h2{
+    color: #2F2F2F;
+    font-size: 50px;
+    margin-bottom: 20px ;
+}
+.team6 section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.team6 form label{
+    font-weight: 600;
+    color: #4e4e4e;
+}
+
+.team6 form input,textarea, select{
+    font-weight: 600;
+    color: #4e4e4e;
+    width: 500px;
+    outline: none;
+    border: 1px solid #6a6a6a;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.team6 p{
+    font-size: 15px;
+    color: #5b5b5b;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    max-width: 500px;
+}
+
+.team6 h5{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.team6 .size-6{
+    width: 20px;
+    color: #2F2F2F;
 }
