@@ -430,3 +430,48 @@ button .size-6{
     width: 20px;
     color: #2F2F2F;
 }
+
+footer{
+    background-color: #4D0001;
+    color: white;
+    padding-top: 5%;
+}
+
+footer section{
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 5%;
+}
+
+footer li{
+    list-style: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.redesSocias{
+    text-align: center;
+}
+
+.redesSocias a{
+    padding: 0px 10px;
+}
+
+.redesSocias img{
+    width: 40px;
+}
+
+.redesSocias p{
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
