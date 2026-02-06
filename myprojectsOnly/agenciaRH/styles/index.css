@@ -17,7 +17,10 @@ header nav{
     background-color: #ffffff;
     padding: 0px 10%;
 }
-
+header nav .menu{
+    width: 20px;
+    display: none;
+}
 
 h1{
      font-family: "Nunito", sans-serif;
@@ -50,11 +53,50 @@ nav ul li a{
 .servicos .size-6{
     width: 20px;
     margin-left: 5px;
+    transition: transform 0.4s ease;
+}
+
+ .servicos .activo.size-6{
+    transform: rotate(-180deg);
+}
+ 
+.servicos{
+    position: relative;
+    cursor: pointer;
 }
 
 .serviSide{
     display: none;
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background-color: #fff;
+    top: 50px;
+    animation: topping 0.4s ease-in-out;
 }
+
+.activo.serviSide{
+    display: block;
+}
+
+@keyframes topping {
+    from{
+        opacity: 0;
+        transform: translate3d(0px, 30px, 0px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+.serviSide a:hover{
+    background-color: #eee;
+    width: 100%;
+    transition-duration: .5s;
+}
+
 
 .team1{
     background-image: url('/myprojectsOnly/agenciaRH/assets/imagens/fristIMG.png');
@@ -117,6 +159,7 @@ button .size-6{
     padding-left: 10%;
     bottom: 0;
     background-image: linear-gradient(to top,rgba(0, 0, 0, 0.824), transparent);
+     animation: scrollar .5s ease-in-out;
     width:100%;
 }
 
@@ -137,7 +180,7 @@ button .size-6{
 
 .team2{
     margin-bottom: 15%;
-    margin-top: 5%;
+    padding-top: 15%;
 }
 
 
@@ -188,6 +231,7 @@ button .size-6{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .believe{
     margin: 5% 0px;
@@ -345,6 +389,18 @@ button .size-6{
     cursor: pointer;
 }
 
+.cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth; /* anima o scroll */
+}
+
+.cards::-webkit-scrollbar {
+  display: none; /* opcional: esconde scrollbar */
+}
+
+
 .team5{
     margin: 5% 0px;
 }
@@ -353,6 +409,41 @@ button .size-6{
     display: flex;
     flex-direction: row;
     justify-content: start;
+}
+
+.diferenciasDivers{
+    margin-left: 150px;
+}
+
+.diferenciasDivers p {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.diferenciasDivers p.activo {
+  max-height: 500px;
+  opacity: 1;
+  animation: altura .5s;
+}
+
+@keyframes altura {
+    from{
+        opacity: 0;
+        max-height: 0px;
+        transform: translate3d(0px, 30px,0px);
+    }
+
+    to{
+        opacity: 1;
+        max-height: 500px;
+        transform: translate3d(0px, 0px,0px);
+    }
+}
+
+.diferenciasDivers .size-6{
+    width: 20px;
+    margin-left: 5px;
 }
 
 .team5 ul div{
@@ -365,19 +456,19 @@ button .size-6{
     margin-bottom: 20px ;
 }
 
-.team5 li{
+.team5 dt{
     text-transform: initial;
     font-weight: 700;
     list-style: none;
     color: #2F2F2F;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .team5 p{
     font-size: 15px;
     color: #5b5b5b;
     margin-bottom: 5px;
-    padding-left: 5px;
     max-width: 500px;
 }
 
@@ -407,10 +498,23 @@ button .size-6{
     color: #4e4e4e;
     width: 500px;
     outline: none;
-    border: 1px solid #6a6a6a;
+    border: 1px solid #a7a7a7;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    transition-duration: .0.5s;
+}
+
+.team6 form  select:focus{
+    border: 3px solid #ff65688d;
+}
+
+.team6 form textarea:focus{
+    border: 3px solid #ff65688d;
+}
+
+.team6 form input:focus{
+    border: 3px solid #ff65688d;
 }
 
 .team6 p{
@@ -429,4 +533,182 @@ button .size-6{
 .team6 .size-6{
     width: 20px;
     color: #2F2F2F;
+}
+
+.team6 button{
+    border: none;
+    padding: 10px 0px;
+    width: 100%;
+    background-color: #BF0B2C;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor:pointer;
+}
+
+/* Services style */
+
+.teamService h2{
+    color: #2F2F2F;
+    font-size: 50px;
+    margin-bottom: 20px ;
+    margin-top: 10%;
+}
+
+.teamService img{
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+    object-position: center center;
+    border-radius: 20px;
+}
+
+.breakTeam{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.breakTeam h6{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #2F2F2F;
+}
+
+.breakTeam p{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #BF0B2C;
+    text-transform: uppercase;
+}
+
+.scrolling{
+    opacity: 0;
+   
+}
+
+.activo.scrolling {
+    opacity: 1;
+    animation: scrollar .5s ease-in-out;
+}
+
+@keyframes scrollar {
+    from{
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width:767px){
+    header{
+        position: relative;
+    }
+    header ul{
+        display: none;
+        flex-direction: column;
+        background-color: #eee;
+        width: 300px;
+        position: absolute;
+        bottom:-255px;
+        right: 0;
+    }
+
+     header ul.activo{
+        display: flex;
+    }
+
+    header nav .size-6{
+      display: block;
+    }
+
+    .teams{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .teams img{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .short{
+        display: none;
+    }
+
+    h1 {
+    font-size: 50px;
+  }
+
+  .ctaSolicitas {
+    width: auto;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 11px;
+}
+
+.ctaWatsapp {
+    width: auto;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 11px;
+}
+.mulder {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.every{
+    margin: 0px 4%;
+}
+
+.every h2{
+    font-size: 30px;
+}
+
+.team5 .diferencias{
+    flex-direction: column;
+    justify-content: start;
+}
+
+.team5 ul{
+    padding-inline-start: 0px;
+    margin-block-start: 0em;
+    text-align:start ;
+}
+.team5 img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+.team5 p{
+    padding-left: 0px;
+}
+
+.team6 section{
+    flex-direction: column;
+}
+
+.team6 form input,textarea, select{
+    width: 100%;
+}
+
+form button{
+    margin-bottom: 30px;
+}
+
+.serviSide{
+    position: static;
+    height: 300px;
+    width: 100%;
+    overflow-y: scroll;
+}
 }

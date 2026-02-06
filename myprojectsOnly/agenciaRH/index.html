@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conecta Angola</title>
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!-- flatIcon -->
     <link rel="shortcut icon" href="assets/imagens/logo.png" type="image/x-icon">
+    <!-- style -->
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="#"><img src="assets/imagens/logo.png" alt="logo"></a>
+            <a href="index.html"><img src="assets/imagens/logo.png" alt="logo"></a>
             <ul>
-                <li><a href="">Principal</a></li>
-                <li><a href="">Sobre</a></li>
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
                 <li class="servicos">
-                    <a href="" style="display: flex;">Serviços <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <a style="display: flex;" >Serviços <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                         </svg>
                         </a>
-                    <ul class="serviSide">
+                    <ul class="serviSide navigator">
                         <li><a href="">Manpower</a></li>
                         <li><a href="">Formação</a></li>
                         <li><a href="">Recrutamento</a></li>
@@ -34,6 +37,10 @@
                 </li>
                 <li><a href="">Contatos</a></li>
             </ul>
+             <!-- mobile -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 menu">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            </svg>
         </nav>
     </header>
     <main>
@@ -62,10 +69,8 @@
             </div>
         </section>
 
-       
-
         <section class="every">
-             <section class="team2">
+             <section class="team2 scrolling">
             <div class="teams">
             <div class="txt2">
                 <h2>Quem Somos</h2>
@@ -87,60 +92,8 @@
             </div>
             </div>
         </section>
-        <!-- <section class="believe">
-            <h2>Nossa Essência</h2>
-            <p>Nascemos para reduzir o fosso entre a teoria acadêmica e a prática profissional, promovendo uma formação ética e realista.</p>
-            <div class="vision">
-            <div class="subVision">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
-                    </svg>
-                    <h4>Missão</h4>
-                    <div>
-                        <h3>A missão da RH Conecta Angola é:</h3>
-                        <ul>
-                            <li>Conectar talentos ao mercado de trabalho</li>
-                            <li>Promover formação prática em Recursos Humanos</li>
-                            <li>Oferecer acompanhamento técnico personalizado</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="subVision">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    </svg>
-                    <h4>Visão</h4>
-                    <div>
-                        <h3>A RH Conecta Angola visa ser a referência em formação prática de Recursos Humanos, destacando-se pela:</h3>
-                        <ul>
-                            <li>Excelência na formação</li>
-                            <li>Alta empregabilidade dos estagiários </li>
-                            <li>Impacto positivo nas organizações</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="subVision">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.05 4.575a1.575 1.575 0 1 0-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 0 1 3.15 0v1.5m-3.15 0 .075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 0 1 3.15 0V15M6.9 7.575a1.575 1.575 0 1 0-3.15 0v8.175a6.75 6.75 0 0 0 6.75 6.75h2.018a5.25 5.25 0 0 0 3.712-1.538l1.732-1.732a5.25 5.25 0 0 0 1.538-3.712l.003-2.024a.668.668 0 0 1 .198-.471 1.575 1.575 0 1 0-2.228-2.228 3.818 3.818 0 0 0-1.12 2.687M6.9 7.575V12m6.27 4.318A4.49 4.49 0 0 1 16.35 15m.002 0h-.002" />
-                    </svg>
-                    <h4>Valores</h4>
-                    <div>
-                        <h3>Étia e Responsabilidade</h3>
-                        <ul>
-                            <li>Agimos com integridade, respeitando normas e valores em todas as interações.</li>
-                            <li>Promover o aprendizado em ambientes reais de trabalho.</li>
-                            <li>Implementamos novas abordagens e soluções criativas.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-          
-            </section> -->
-
-        <section class="team4">
+  
+        <section class="team4 scrolling">
             <div class="moreService">
                 <h2>Nossos Serviços</h2>
                 <div class="submore">
@@ -157,7 +110,7 @@
                 </div>
             </div>
 
-              <section>
+              <section class="cards">
                 <div>
                     <img src="assets/imagens/servicos/manPower.jpg" alt="manPower">
                     <h5>Manpower</h5>
@@ -208,14 +161,13 @@
                 </div>
               </section>
         </section>
-        <section class="team5">
+        <section class="team5 scrolling">
             <h2>Diferencias</h2>
             <div class="diferencias">
                 <img src="assets/imagens/servicos/diferencias.jpg" alt="diferencias">
-                <div>
-                    <ul>
-                        <div>
-                            <li>FOCO EM EMPREGABILIDADE</li>
+                <div class="diferenciasDivers">
+                    <div>
+                        <dt style="display: flex; align-items: center;">FOCO EM EMPREGABILIDADE </dt>
                         <p>A RH Conecta Angola prioriza a empregabilidade dos
                             estagiários, oferecendo experiências práticas que os
                             tornam mais competitivos no mercado de trabalho
@@ -223,7 +175,7 @@
                         </p>
                         </div>
                        <div>
-                        <li>FORMAÇÃO PRÁTICA</li>
+                        <dt style="display: flex; align-items: center;">FORMAÇÃO PRÁTICA</dt>
                         <p>A formação prática é central na nossa abordagem,
                             proporcionando aos estagiários a aplicação de
                             conhecimentos teóricos em situações reais, desenvolvendo
@@ -231,7 +183,7 @@
                         </p>
                        </div>
                         <div>
-                           <li>ESTÁGIO ESTRUTURADO</li>
+                           <dt style="display: flex; align-items: center;">ESTÁGIO ESTRUTURADO</dt>
                         <p>Nossos estágios são estruturados e supervisionados,
                             garantindo um acompanhamento de qualidade e feedback
                             constante, permitindo que os estagiários cresçam e se
@@ -239,12 +191,12 @@
                         </p> 
                         </div>
                         
-                    </ul>
+                   
                 </div>
-                 <div>
-                    <ul>
+                 <div class="diferenciasDivers">
+                 
                         <div>
-                            <li>FOCO EM EMPREGABILIDADE</li>
+                            <dt style="display: flex; align-items: center;">FOCO EM EMPREGABILIDADE</dt>
                         <p>A RH Conecta Angola prioriza a empregabilidade dos
                             estagiários, oferecendo experiências práticas que os
                             tornam mais competitivos no mercado de trabalho
@@ -252,7 +204,7 @@
                         </p>
                         </div>
                        <div>
-                        <li>FORMAÇÃO PRÁTICA</li>
+                        <dt style="display: flex; align-items: center;">FORMAÇÃO PRÁTICA</dt>
                         <p>A formação prática é central na nossa abordagem,
                             proporcionando aos estagiários a aplicação de
                             conhecimentos teóricos em situações reais, desenvolvendo
@@ -260,7 +212,7 @@
                         </p>
                        </div>
                         <div>
-                           <li>ESTÁGIO ESTRUTURADO</li>
+                           <dt style="display: flex; align-items: center;">ESTÁGIO ESTRUTURADO'</dt>
                         <p>Nossos estágios são estruturados e supervisionados,
                             garantindo um acompanhamento de qualidade e feedback
                             constante, permitindo que os estagiários cresçam e se
@@ -268,16 +220,16 @@
                         </p> 
                         </div>
                         
-                    </ul>
+                 
                 </div>
             </div>
           
         </section>
 
-        <section class="team6">
+        <section class="team6 scrolling">
             <h2>Fale Connosco</h2>
             <section>
-                      <div>
+            <div>
                 <form action="">
                     <label for="nome">Nome Completo</label><br>
                     <input type="text" name="nome" id="nome" placeholder="Ex: João da Silva"><br>
@@ -295,7 +247,8 @@
                         <option value="gestao_de_processos administrativos_de_rh">Gestão de Processos Administrativos de RH</option>
                     </select><br>
                     <label for="mensagem">Mensagem</label><br>
-                   <textarea name="mansagem" id="mensagem"></textarea>
+                   <textarea name="mansagem" id="mensagem" rows="8"></textarea> <br>
+                   <button type="submit">Enviar</button>
                 </form>
             </div>
 
@@ -318,7 +271,7 @@
                     </svg>
                   <p>academiaangola@gmail.com</p>
                 </h5>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15766.237208696159!2d13.18087506123086!3d-8.920496709938297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f53b60545d67%3A0xed624daf9afdcf09!2sTalatona!5e0!3m2!1spt-PT!2sao!4v1770049082778!5m2!1spt-PT!2sao" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15766.237208696159!2d13.18087506123086!3d-8.920496709938297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f53b60545d67%3A0xed624daf9afdcf09!2sTalatona!5e0!3m2!1spt-PT!2sao!4v1770049082778!5m2!1spt-PT!2sao" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             </section>
         </section>
@@ -327,5 +280,6 @@
     <footer>
 
     </footer>
+    <script src="scripts/cards.js"></script>
 </body>
 </html>
