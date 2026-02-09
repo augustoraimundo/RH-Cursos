@@ -31,11 +31,11 @@ h1{
 nav ul{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 nav ul li{
-    display: flex;
-    flex-direction: row;
+    list-style: none;
 }
 
 nav img{
@@ -75,6 +75,15 @@ nav ul li a{
     animation: topping 0.4s ease-in-out;
 }
 
+.serviSide li{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.serviSide li a{
+   font-size: 14px;
+}
+
 .activo.serviSide{
     display: block;
 }
@@ -92,7 +101,7 @@ nav ul li a{
 }
 
 .serviSide a:hover{
-    background-color: #eee;
+    color: #787878;
     width: 100%;
     transition-duration: .5s;
 }
@@ -660,11 +669,17 @@ footer a{
     header ul{
         display: none;
         flex-direction: column;
-        background-color: #eee;
+        background-color: #fff;
         width: 300px;
         position: absolute;
-        bottom:-255px;
+        bottom: -250px;;
         right: 0;
+        padding-top: 30px;
+    }
+
+    .principal{
+        text-align: left;
+        margin-bottom: 30px;
     }
 
      header ul.activo{
@@ -755,5 +770,19 @@ form button{
     height: 300px;
     width: 100%;
     overflow-y: scroll;
+    height: 200px;
+}
+
+.serviSide li a{
+   font-size: 15px;
+}
+
+.diferenciasDivers {
+    margin-left: 0px;
+}
+
+footer section{
+    flex-direction: column;
+    padding-left:20px ;
 }
 }
