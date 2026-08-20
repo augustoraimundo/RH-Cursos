@@ -1,3 +1,15 @@
+:root{
+    --color-primary: #BF0B2C;
+    --color-primary-dark: #4D0001;
+    --color-text: #2F2F2F;
+    --color-text-light: #5b5b5b;
+    --color-border: #ddd;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0px;
     margin: 0px;
@@ -22,20 +34,26 @@ header nav .menu{
     display: none;
 }
 
-h1{
+.team1 h1{
      font-family: "Nunito", sans-serif;
-     font-size: 100px;
+     font-size: 80px;
+     color: #ffffff;
+}
+
+.team1Sobre h1{
+     font-family: "Nunito", sans-serif;
+     font-size: 80px;
      color: #ffffff;
 }
 
 nav ul{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 nav ul li{
-    display: flex;
-    flex-direction: row;
+    list-style: none;
 }
 
 nav img{
@@ -47,7 +65,7 @@ nav ul li a{
     padding: 20px;
     font-size: 18px;
     font-weight: 600;
-    color: #2F2F2F;
+    color: var(--color-text);
 }
 
 .servicos .size-6{
@@ -75,6 +93,15 @@ nav ul li a{
     animation: topping 0.4s ease-in-out;
 }
 
+.serviSide li{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.serviSide li a{
+   font-size: 14px;
+}
+
 .activo.serviSide{
     display: block;
 }
@@ -92,14 +119,22 @@ nav ul li a{
 }
 
 .serviSide a:hover{
-    background-color: #eee;
+    color: #787878;
     width: 100%;
     transition-duration: .5s;
 }
 
 
 .team1{
-    background-image: url('/myprojectsOnly/agenciaRH/assets/imagens/fristIMG.png');
+    background-image: url('../assets/imagens/fristIMG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.team1Sobre{
+    background-image: url('../assets/imagens/study-group-african-people\ \(3\).jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -113,13 +148,21 @@ nav ul li a{
     margin-top: 5px;
 }
 
-.botoes{
-    display: flex;
+.team1Sobre .txt1{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin: auto;
+    max-width: 800px;
 }
 
-.ctaWatsapp{
-    border:2px solid white;
-    color: white;
+.botoes{
+    display: flex;
+    justify-content: center;
+}
+
+.ctaWatsapp,
+.ctaSolicitas{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -129,23 +172,24 @@ nav ul li a{
     font-size: 15px;
     cursor: pointer;
     margin-top: 30px;
+}
+
+.ctaWatsapp{
+    border: 2px solid white;
+    color: white;
     background-color: transparent;
     margin-left: 20px;
 }
 
 .ctaSolicitas{
-    background-color: #BF0B2C;
+    background-color: var(--color-primary);
     border: none;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: auto;
-    border-radius: 30px;
-    padding: 10px 30px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-top: 30px;
+}
+
+button:hover{
+    background-color: var(--color-primary-dark);
+    transition-duration: .5s;
 }
 
 button .size-6{
@@ -155,20 +199,29 @@ button .size-6{
 
 .mulder{
     position: absolute;
-    padding-bottom: 40px;
-    padding-left: 10%;
+    padding-bottom: 500px;
     bottom: 0;
-    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.824), transparent);
+    height: 50vh;
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.91), transparent);
      animation: scrollar .5s ease-in-out;
     width:100%;
+    text-align: center;
 }
 
-.mulder img{
-    width: 50px;
+.team1Sobre .mulder{
+    position: absolute;
+    padding-bottom: 500px;
+    bottom: 0;
+    height: 50vh;
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.91), transparent);
+     animation: scrollar .5s ease-in-out;
+    width:100%;
+    text-align: center;
 }
+
 
 .team1 .namo{
-    background-color: #BF0B2C;
+    background-color: var(--color-primary);
     width: 200px;
     color: white;
     border-radius: 30px;
@@ -180,9 +233,13 @@ button .size-6{
 
 .team2{
     margin-bottom: 15%;
-    padding-top: 15%;
+    padding-top: 10%;
 }
-
+/* 
+.tema p{
+    max-width: 500px;
+    margin-top: 20px;
+} */
 
 .teams{
     display: flex;
@@ -194,6 +251,12 @@ button .size-6{
     position: relative;
 }
 
+.alunos img{
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 10px;
+}
+
 .short{
     position: absolute;
     left: -20%;
@@ -201,31 +264,18 @@ button .size-6{
 }
 
 .team2 h2{
-    color: #2F2F2F;
+    color: var(--color-text);
     font-size: 50px;
     margin-bottom: 20px ;
 }
 
-/* .team2 h2{
-    font-family: "Nunito", sans-serif;
-    font-size: 100px;
-    color: #ffffff;
-} */
-
 .team2 p{
-    font-size: 18px;
-    color: #5b5b5b;
-    margin-bottom: 5px;
-    padding-left: 5px;
+    font-size: 20px;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    padding-right: 25px;
     max-width: 600px;
 }
-
-/* .team2 p{
-    font-family: "Nunito", sans-serif;
-    font-size: 20px;
-    color: #d0d0d0;
-    max-width: 600px;
-} */
 
 .vision{
     display: flex;
@@ -236,68 +286,105 @@ button .size-6{
 .believe{
     margin: 5% 0px;
 }
+
+.believe img{
+    object-fit: cover;
+    object-position:left center;
+    width: 400px;
+    border-radius: 10px;
+}
 .believe h2{
-    color: #2F2F2F;
+    color: var(--color-text);
     font-size: 50px;
 }
 
 .believe p{
-    color: #5b5b5b;
+    color: var(--color-text-light);
     max-width: 500px;
 }
 
 .subVision{
-    border: 1px solid #ddd;
-    padding: 10px;
+    /* border: 1px solid #ddd; */
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.088);
+    padding: 20px;
+    margin: 0px 10px;
     border-radius: 10px;
     position: relative;
-    height: 250px;
+    height: auto;
     width: 397px;
     margin-top: 20px;
+}
+
+.subVisions{
+     /* border: 1px solid #ddd; */
+     background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.088);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.subVision li::before,.subVisions li::before {
+    content: "*";
+    font-size: 20px;
+    color: #BF0B2C;
+    margin-right: 5px;
+    display: inline-flex;
+}
+
+.subVisions div{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
 }
 
 .subVision  .size-6{
     width: 40px;
     margin-left: 2px;
-    color: #2F2F2F;
+    color: var(--color-text);
 }
 
-.subVision a .size-6{
+.subVision a .size-6, .subVisions .size-6{
     width: 20px;
     margin-left: 2px;
-    color: #4D0001;
+    color: var(--color-primary-dark);
 }
 
-.subVision h4{
+.subVision h4, .subVisions h4{
     max-width: 400px;
     color: #323232;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.subVision h3{
+.subVision h3, .subVisions h3{
     max-width: 400px;
-    color: #2F2F2F;
+    color: var(--color-text);
     font-size: 12px;
 }
 
-.subVision a{
+.subVision a, .subVisions a{
     display: flex;
     align-items: center;
     text-decoration: none;
     position: absolute;
     bottom: 20px;
-    color: #4D0001;
+    color: var(--color-primary-dark);
 }
 
-.subVision li{
+.subVision li, .subVisions li{
     max-width: 400px;
     color: #4e4e4e;
     font-size: 15px;
     margin-top: 10px;
 }
 
-.subVision li{
+.subVision li, .subVisions li{
     list-style: none;
 }
 
@@ -316,6 +403,7 @@ button .size-6{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 200px;
 }
 
 .moreService .submore{
@@ -325,46 +413,42 @@ button .size-6{
     justify-content: space-evenly;
 }
 
+.moreService article:hover{
+    background-color: var(--color-primary);
+    transition-duration: 2s;
+    border: 1px solid #fff;
+}
+
+.preview:hover{
+    color: #ffff;
+}
+
+
+.next:hover{
+    color: #ffff;
+}
 .moreService article{
     width: 30px;
     height: 30px;
-    border: 1px solid #5b5b5b;
+    border: 1px solid var(--color-text-light);
     border-radius: 50%;
     cursor: pointer;
     margin-left: 20px;
 }
 .moreService .size-6{
     width: 20px;
-    color: #5b5b5b;
+    color: var(--color-text-light);
     margin-top: 5px;
     margin-left: 4px;
 }
 
 .team4 h2{
-    color: #2F2F2F;
+    color: var(--color-text);
     font-size: 50px;
 }
 
-.team4 section{
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-between;
-}
-
-.team4 section div{
-    width: 300px;
-    height: 450px;
-    margin: 10px;
-    background-color: #fdfdfd;
-    border-radius: 20px;
-    position: relative;
-    border: 1px solid #ddd;
-    padding: 5px;
-}
-
 .team4 img {
-    width: 250px;
+    width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 20px;
@@ -372,38 +456,67 @@ button .size-6{
 
 .team4 h5{
     font-size: 20px;
-    color: #2F2F2F;
+    color: var(--color-text);
     padding-left: 5px;
 }
 
-.team4 p{
-    font-size: 15px;
-    color: #5b5b5b;
-    margin-bottom: 5px;
-    padding-left: 5px;
+.tema p{
+    font-size: 20px;
+    color: var(--color-text-light);
+    margin-bottom: 25px;
+    max-width: 800px;
 }
 
 .team4 span{
     font-size: 15px;
-    color: #BF0B2C;
+    color: var(--color-primary);
     cursor: pointer;
 }
 
 .cards {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
   overflow-x: auto;
-  scroll-behavior: smooth; /* anima o scroll */
+  padding: 5px 0 15px;
+  margin-bottom: 5%;
 }
 
 .cards::-webkit-scrollbar {
   display: none; /* opcional: esconde scrollbar */
 }
 
-
-.team5{
-    margin: 5% 0px;
+.cards > div {
+  flex: 0 0 300px;
+  height: 450px;
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid var(--color-border);
+  padding: 5px;
 }
+
+.cards  p{
+    font-size: 15px;
+    color: var(--color-text-light);
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+.moreService article.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.moreService article:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+
 
 .team5 .diferencias{
     display: flex;
@@ -416,15 +529,33 @@ button .size-6{
 }
 
 .diferenciasDivers p {
-  max-height: 0;
+  max-height: auto;
   opacity: 0;
   overflow: hidden;
+  padding-bottom: 10px;
+  max-height: 0;
+}
+
+.diferenciasDivers div{
+  border-bottom: 0.5px solid #eee;
+  margin-bottom: 10px;
 }
 
 .diferenciasDivers p.activo {
   max-height: 500px;
   opacity: 1;
   animation: altura .5s;
+}
+
+.diferenciasDivers .size-6.activo {
+  transform: rotate(-180deg);
+}
+
+
+.diferenciasDivers .size-6{
+    width: 20px;
+    margin-left: 5px;
+    transition: transform 0.4s ease;
 }
 
 @keyframes altura {
@@ -441,44 +572,44 @@ button .size-6{
     }
 }
 
-.diferenciasDivers .size-6{
-    width: 20px;
-    margin-left: 5px;
-}
 
 .team5 ul div{
     margin-left:50px;
     margin-bottom:50px;
 }
 .team5 h2{
-    color: #2F2F2F;
+    color: var(--color-text);
     font-size: 50px;
-    margin-bottom: 20px ;
+    margin-bottom: 5px ;
 }
 
 .team5 dt{
     text-transform: initial;
     font-weight: 700;
     list-style: none;
-    color: #2F2F2F;
+    color: var(--color-text);
     cursor: pointer;
-    margin-top: 15px;
+    /* margin-top: 15px; */
+    font-size: 20px;
 }
 
 .team5 p{
-    font-size: 15px;
-    color: #5b5b5b;
-    margin-bottom: 5px;
-    max-width: 500px;
+    font-size: 20px;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    max-width: 600px;
 }
 
 .team5 img{
-    width: 300px;
+    object-fit: cover;
+    object-position: top center;
+    height: 600px;
+    width: 600px;
     border-radius: 20px;
 }
 
 .team6 h2{
-    color: #2F2F2F;
+    color: var(--color-text);
     font-size: 50px;
     margin-bottom: 20px ;
 }
@@ -493,7 +624,9 @@ button .size-6{
     color: #4e4e4e;
 }
 
-.team6 form input,textarea, select{
+.team6 form input,
+.team6 form textarea,
+.team6 form select{
     font-weight: 600;
     color: #4e4e4e;
     width: 500px;
@@ -502,7 +635,7 @@ button .size-6{
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    transition-duration: .0.5s;
+    transition-duration: .5s;
 }
 
 .team6 form  select:focus{
@@ -519,7 +652,7 @@ button .size-6{
 
 .team6 p{
     font-size: 15px;
-    color: #5b5b5b;
+    color: var(--color-text-light);
     margin-bottom: 5px;
     padding-left: 5px;
     max-width: 500px;
@@ -532,14 +665,14 @@ button .size-6{
 }
 .team6 .size-6{
     width: 20px;
-    color: #2F2F2F;
+    color: var(--color-text);
 }
 
 .team6 button{
     border: none;
     padding: 10px 0px;
     width: 100%;
-    background-color: #BF0B2C;
+    background-color: var(--color-primary);
     color: white;
     font-size: 18px;
     border-radius: 20px;
@@ -549,7 +682,7 @@ button .size-6{
 /* Services style */
 
 .teamService h2{
-    color: #2F2F2F;
+    color: var(--color-text);
     font-size: 50px;
     margin-bottom: 20px ;
     margin-top: 10%;
@@ -575,14 +708,14 @@ button .size-6{
     font-size: 18px;
     font-weight: 500;
     text-align: center;
-    color: #2F2F2F;
+    color: var(--color-text);
 }
 
 .breakTeam p{
     font-size: 14px;
     font-weight: 400;
     text-align: center;
-    color: #BF0B2C;
+    color: var(--color-primary);
     text-transform: uppercase;
 }
 
@@ -608,8 +741,57 @@ button .size-6{
     }
 }
 
+.letter{
+    background-image: url('../assets/imagens/fristIMG.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    width: 100%;
+    padding: 30px;
+    margin: 100px 0px;
+    height: auto;
+    text-align: center;
+}
+
+.letter h2{
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.letter form input {
+    font-weight: 600;
+    color: #4e4e4e;
+    width: 500px;
+    outline: none;
+    border: 1px solid #a7a7a7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition-duration: .5s;
+}
+
+.letter form button {
+    font-weight: 600;
+    color: #4e4e4e;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition-duration: .5s;
+    background-color: #BF0B2C;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.letter h2{
+    color: white;
+}
+
 footer{
-    background-color: #4D0001;
+    background-color: var(--color-primary-dark);
     color: white;
     padding-top: 5%;
 }
@@ -653,18 +835,273 @@ footer a{
     font-size: 12px;
 }
 
+
+.tasks,
+.tasks2,
+.tasks3,
+.tasks4,
+.tasks5,
+.tasks6,
+.tasks7{
+    position: fixed;
+    top: 0;
+    background-color: #ddd;
+    z-index: 500;
+    right: 0;
+    height: 100vh;
+    padding: 30px;
+    text-align: left;
+    display: none;
+    animation: animation .5s ease-in-out;
+}
+
+.activo.tasks,
+.activo.tasks2,
+.activo.tasks3,
+.activo.tasks4,
+.activo.tasks5,
+.activo.tasks6,
+.activo.tasks7{
+    display: block;
+}
+
+
+@keyframes animation {
+    from{
+        opacity: 0;
+        transform: translate3d(80px, 0px, 0px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+.tasks p,
+.tasks2 p,
+.tasks3 p,
+.tasks4 p,
+.tasks5 p,
+.tasks6 p,
+.tasks7 p{
+    max-width: 500px;
+}
+
+.tasks img,
+.tasks2 img,
+.tasks3 img,
+.tasks4 img,
+.tasks5 img,
+.tasks6 img,
+.tasks7 img{
+    width: 500px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.tasks h5,
+.tasks2 h5,
+.tasks3 h5,
+.tasks4 h5,
+.tasks5 h5,
+.tasks6 h5,
+.tasks7 h5{
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.tasks button,
+.tasks2 button,
+.tasks3 button,
+.tasks4 button,
+.tasks5 button,
+.tasks6 button,
+.tasks7 button{
+    border: none;
+    border-radius: 50%;
+    background-color: #4D0001;
+    color: white;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+.escolha{
+    background-color: #BF0B2C;
+    padding: 50px 0px;
+    margin: 50px 0px 0px 0px;
+}
+
+.escolha h2{
+    color: white;
+    max-width: 1300px;
+    margin: auto;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.escolha div{
+    max-width: 1300px;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly ;
+}
+
+.escolha dt{
+    font-size: 25px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.escolha dd{
+    font-size: 22px;
+    font-weight: lighter;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+.escolha dt::before{
+    content: "*";
+    font-size: 40px;
+    color: #4D0001;
+    margin-right: 5px;
+    margin-top: 15px;
+    display: inline-flex;
+}
+
+
+.solution{
+    background-color: #4D0001;
+    padding: 50px 0px;
+    margin: 0px 0px 100px 0px;
+    position: relative;
+}
+
+.solution .smaill{
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: left center;
+}
+
+.solution .other{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: left center;
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+}
+
+.solution h2{
+    color: white;
+    max-width: 1300px;
+    margin: auto;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.solution div{
+    max-width: 1300px;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly ;
+}
+
+.solution dt{
+    font-size: 25px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.solution dd{
+    font-size: 22px;
+    font-weight: lighter;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+.solution dt::before{
+    content: "*";
+    font-size: 40px;
+    color: #BF0B2C;
+    margin-right: 5px;
+    margin-top: 15px;
+    display: inline-flex;
+}
+
+.visionAndMission{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
 @media (max-width:767px){
+    .believe img{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .subVision{
+        width: 100%;
+    }
+.visionAndMission{
+       flex-direction: column;  
+    }
+.subVisions div{
+     flex-direction: column;
+}
+.letter h2{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.letter form input {
+    font-weight: 600;
+    color: #4e4e4e;
+    width: 200px;
+    outline: none;
+    border: 1px solid #a7a7a7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition-duration: .5s;
+}
+
+
     header{
         position: relative;
     }
     header ul{
         display: none;
         flex-direction: column;
-        background-color: #eee;
+        background-color: #fff;
         width: 300px;
         position: absolute;
-        bottom:-255px;
+        bottom: -250px;;
         right: 0;
+        padding-top: 30px;
+    }
+
+    .principal{
+        text-align: left;
+        margin-bottom: 30px;
     }
 
      header ul.activo{
@@ -689,9 +1126,13 @@ footer a{
         display: none;
     }
 
-    h1 {
+    .team1 h1 {
     font-size: 50px;
   }
+
+    .cards > div {
+        flex-basis: 80vw;
+    }
 
   .ctaSolicitas {
     width: auto;
@@ -699,6 +1140,8 @@ footer a{
     padding: 10px 20px;
     font-size: 11px;
 }
+
+
 
 .ctaWatsapp {
     width: auto;
@@ -742,7 +1185,9 @@ footer a{
     flex-direction: column;
 }
 
-.team6 form input,textarea, select{
+.team6 form input,
+.team6 form textarea,
+.team6 form select{
     width: 100%;
 }
 
@@ -755,5 +1200,39 @@ form button{
     height: 300px;
     width: 100%;
     overflow-y: scroll;
+    height: 200px;
+}
+
+.serviSide li a{
+   font-size: 15px;
+}
+
+.diferenciasDivers {
+    margin-left: 0px;
+}
+
+footer section{
+    flex-direction: column;
+    padding-left:20px ;
+}
+
+.moreService{
+    margin-top: 8%;
+}
+
+.solution, .escolha{
+    padding: 20px;
+}
+
+.solution div, .escolha div{
+    flex-direction: column;
+}
+.solution .smaill{
+    width: 100%;
+}
+
+.solution .other{
+    display: none;
 }
 }
+
