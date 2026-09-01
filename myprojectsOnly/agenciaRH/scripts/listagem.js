@@ -1,14 +1,12 @@
-export default function listagem(){
-  const list = document.querySelectorAll('dt')
-    if(list){
-        list[0].nextElementSibling.classList.add('activo')
-        list[0].classList.add('activo')
-        function mostreLista(){
+const list = document.querySelectorAll('dt')
+      list[0].nextElementSibling.classList.add('activo')
+      list[0].classList.add('activo')
+
+    function mostreLista(){
         this.nextElementSibling.classList.toggle('activo')
         this.classList.toggle('activo')
 
        const icon = this.querySelector('.df')
-
         if(icon){
             icon.classList.toggle('activo')
     }
@@ -16,6 +14,4 @@ export default function listagem(){
     list.forEach(element => {
         element.addEventListener('click', mostreLista)
   });
-}
 
-}
