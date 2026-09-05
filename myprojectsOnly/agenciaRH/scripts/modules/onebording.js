@@ -1,5 +1,5 @@
 export default function accordionList(){
-    const seeMore = document.querySelector(".seeMore6")
+    const seeMore = document.querySelectorAll(".seeMore6")
     const task = document.querySelector('.tasks6')
     const remover = document.querySelector('.remover6')
 
@@ -12,9 +12,10 @@ export default function accordionList(){
         function removerTask(){
             task.classList.remove('activo')
         }
-
-
-        seeMore.addEventListener('click', mostreTask)
+        // seeMore.addEventListener('click', mostreTask)
+        seeMore.forEach((element) =>{
+            element.addEventListener('click', mostreTask)
+        })
         remover.addEventListener('click', removerTask)
     }
 }

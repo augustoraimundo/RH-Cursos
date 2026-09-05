@@ -8,8 +8,6 @@ export default function animaScroll(){
 
         if(topar < 0){
             elemento.classList.add('activo')
-        }else{
-            elemento.classList.remove('activo')
         }
     })
     }

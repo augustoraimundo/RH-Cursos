@@ -14,7 +14,7 @@ html{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: "Nunito";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header nav{
@@ -35,7 +35,11 @@ header nav .menu{
 }
 
 .team1 h1{
-     font-family: "Nunito", sans-serif;
+     font-size: 80px;
+     color: #ffffff;
+}
+
+.team1Sobre h1{
      font-size: 80px;
      color: #ffffff;
 }
@@ -51,7 +55,7 @@ nav ul li{
 }
 
 nav img{
-    width: 100px;
+    width: 150px;
 }
 
 nav ul li a{
@@ -120,8 +124,15 @@ nav ul li a{
 
 
 .team1{
-    /* background-image: url('/myprojectsOnly/agenciaRH/assets/imagens/fristIMG.png'); */
     background-image: url('../assets/imagens/fristIMG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.team1Sobre{
+    background-image: url('../assets/imagens/study-group-african-people.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -135,8 +146,17 @@ nav ul li a{
     margin-top: 5px;
 }
 
+.team1Sobre .txt1{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin: auto;
+    max-width: 800px;
+}
+
 .botoes{
     display: flex;
+    justify-content: center;
 }
 
 .ctaWatsapp,
@@ -177,17 +197,26 @@ button .size-6{
 
 .mulder{
     position: absolute;
-    padding-bottom: 40px;
-    padding-left: 10%;
+    padding-bottom: 500px;
     bottom: 0;
-    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.824), transparent);
+    height: 50vh;
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.91), transparent);
      animation: scrollar .5s ease-in-out;
     width:100%;
+    text-align: center;
 }
 
-.mulder img{
-    width: 50px;
+.team1Sobre .mulder{
+    position: absolute;
+    padding-bottom: 500px;
+    bottom: 0;
+    height: 50vh;
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.91), transparent);
+     animation: scrollar .5s ease-in-out;
+    width:100%;
+    text-align: center;
 }
+
 
 .team1 .namo{
     background-color: var(--color-primary);
@@ -202,9 +231,13 @@ button .size-6{
 
 .team2{
     margin-bottom: 15%;
-    padding-top: 15%;
+    padding-top: 10%;
 }
-
+/* 
+.tema p{
+    max-width: 500px;
+    margin-top: 20px;
+} */
 
 .teams{
     display: flex;
@@ -230,15 +263,15 @@ button .size-6{
 
 .team2 h2{
     color: var(--color-text);
-    font-size: 50px;
+    font-size: 35px;
     margin-bottom: 20px ;
 }
 
 .team2 p{
-    font-size: 18px;
+    font-size: 20px;
     color: var(--color-text-light);
-    margin-bottom: 5px;
-    padding-left: 5px;
+    margin-bottom: 15px;
+    padding-right: 25px;
     max-width: 600px;
 }
 
@@ -251,6 +284,13 @@ button .size-6{
 .believe{
     margin: 5% 0px;
 }
+
+.believe img{
+    object-fit: cover;
+    object-position:left center;
+    width: 400px;
+    border-radius: 10px;
+}
 .believe h2{
     color: var(--color-text);
     font-size: 50px;
@@ -262,13 +302,43 @@ button .size-6{
 }
 
 .subVision{
-    border: 1px solid #ddd;
-    padding: 10px;
+    /* border: 1px solid #ddd; */
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.088);
+    padding: 20px;
+    margin: 0px 10px;
     border-radius: 10px;
     position: relative;
-    height: 250px;
+    height: auto;
     width: 397px;
     margin-top: 20px;
+}
+
+.subVisions{
+     /* border: 1px solid #ddd; */
+     background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.088);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.subVision li::before,.subVisions li::before {
+    content: "*";
+    font-size: 20px;
+    color: #BF0B2C;
+    margin-right: 5px;
+    display: inline-flex;
+}
+
+.subVisions div{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
 }
 
 .subVision  .size-6{
@@ -277,26 +347,26 @@ button .size-6{
     color: var(--color-text);
 }
 
-.subVision a .size-6{
+.subVision a .size-6, .subVisions .size-6{
     width: 20px;
     margin-left: 2px;
     color: var(--color-primary-dark);
 }
 
-.subVision h4{
+.subVision h4, .subVisions h4{
     max-width: 400px;
     color: #323232;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.subVision h3{
+.subVision h3, .subVisions h3{
     max-width: 400px;
     color: var(--color-text);
     font-size: 12px;
 }
 
-.subVision a{
+.subVision a, .subVisions a{
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -305,14 +375,14 @@ button .size-6{
     color: var(--color-primary-dark);
 }
 
-.subVision li{
+.subVision li, .subVisions li{
     max-width: 400px;
     color: #4e4e4e;
     font-size: 15px;
     margin-top: 10px;
 }
 
-.subVision li{
+.subVision li, .subVisions li{
     list-style: none;
 }
 
@@ -388,11 +458,11 @@ button .size-6{
     padding-left: 5px;
 }
 
-.team4 p{
-    font-size: 15px;
+.tema p{
+    font-size: 20px;
     color: var(--color-text-light);
-    margin-bottom: 5px;
-    padding-left: 5px;
+    margin-bottom: 25px;
+    max-width: 800px;
 }
 
 .team4 span{
@@ -422,6 +492,13 @@ button .size-6{
   position: relative;
   border: 1px solid var(--color-border);
   padding: 5px;
+}
+
+.cards  p{
+    font-size: 15px;
+    color: var(--color-text-light);
+    margin-bottom: 5px;
+    padding-left: 5px;
 }
 
 .moreService article.disabled {
@@ -515,10 +592,10 @@ button:focus-visible {
 }
 
 .team5 p{
-    font-size: 18px;
+    font-size: 20px;
     color: var(--color-text-light);
     margin-bottom: 20px;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .team5 img{
@@ -668,9 +745,9 @@ button:focus-visible {
     /* background-attachment: fixed; */
     background-size: cover;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
     margin: 100px 0px;
-    height: 40vh;
+    height: auto;
     text-align: center;
 }
 
@@ -756,9 +833,238 @@ footer a{
     font-size: 12px;
 }
 
-@media (max-width:767px){
 
-    .letter h2{
+.tasks,
+.tasks2,
+.tasks3,
+.tasks4,
+.tasks5,
+.tasks6,
+.tasks7{
+    position: fixed;
+    top: 0;
+    background-color: #ddd;
+    z-index: 500;
+    right: 0;
+    height: 100vh;
+    padding: 30px;
+    text-align: left;
+    display: none;
+    animation: animation .5s ease-in-out;
+}
+
+.activo.tasks,
+.activo.tasks2,
+.activo.tasks3,
+.activo.tasks4,
+.activo.tasks5,
+.activo.tasks6,
+.activo.tasks7{
+    display: block;
+}
+
+
+@keyframes animation {
+    from{
+        opacity: 0;
+        transform: translate3d(80px, 0px, 0px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+.tasks p,
+.tasks2 p,
+.tasks3 p,
+.tasks4 p,
+.tasks5 p,
+.tasks6 p,
+.tasks7 p{
+    max-width: 500px;
+}
+
+.tasks img,
+.tasks2 img,
+.tasks3 img,
+.tasks4 img,
+.tasks5 img,
+.tasks6 img,
+.tasks7 img{
+    width: 500px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.tasks h5,
+.tasks2 h5,
+.tasks3 h5,
+.tasks4 h5,
+.tasks5 h5,
+.tasks6 h5,
+.tasks7 h5{
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.tasks button,
+.tasks2 button,
+.tasks3 button,
+.tasks4 button,
+.tasks5 button,
+.tasks6 button,
+.tasks7 button{
+    border: none;
+    border-radius: 50%;
+    background-color: #4D0001;
+    color: white;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+.escolha{
+    background-color: #BF0B2C;
+    padding: 50px 0px;
+    margin: 50px 0px 0px 0px;
+}
+
+.escolha h2{
+    color: white;
+    max-width: 1300px;
+    margin: auto;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.escolha div{
+    max-width: 1300px;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly ;
+}
+
+.escolha dt{
+    font-size: 25px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.escolha dd{
+    font-size: 22px;
+    font-weight: lighter;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+.escolha dt::before{
+    content: "*";
+    font-size: 40px;
+    color: #4D0001;
+    margin-right: 5px;
+    margin-top: 15px;
+    display: inline-flex;
+}
+
+
+.solution{
+    background-color: #4D0001;
+    padding: 50px 0px;
+    margin: 0px 0px 100px 0px;
+    position: relative;
+}
+
+.solution .smaill{
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: left center;
+}
+
+.solution .other{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: left center;
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+}
+
+.solution h2{
+    color: white;
+    max-width: 1300px;
+    margin: auto;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.solution div{
+    max-width: 1300px;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly ;
+}
+
+.solution dt{
+    font-size: 25px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.solution dd{
+    font-size: 22px;
+    font-weight: lighter;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+.solution dt::before{
+    content: "*";
+    font-size: 40px;
+    color: #BF0B2C;
+    margin-right: 5px;
+    margin-top: 15px;
+    display: inline-flex;
+}
+
+.visionAndMission{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width:767px){
+    .believe img{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .subVision{
+        width: 100%;
+    }
+.visionAndMission{
+       flex-direction: column;  
+    }
+.subVisions div{
+     flex-direction: column;
+}
+.letter h2{
     font-size: 20px;
     margin-top: 50px;
     margin-bottom: 30px;
@@ -911,98 +1217,20 @@ footer section{
 .moreService{
     margin-top: 8%;
 }
+
+.solution, .escolha{
+    padding: 20px;
 }
 
+.solution div, .escolha div{
+    flex-direction: column;
+}
+.solution .smaill{
+    width: 100%;
+}
 
-.tasks,
-.tasks2,
-.tasks3,
-.tasks4,
-.tasks5,
-.tasks6,
-.tasks7{
-    position: fixed;
-    top: 0;
-    background-color: #ddd;
-    z-index: 500;
-    right: 0;
-    height: 100vh;
-    padding: 30px;
-    text-align: left;
+.solution .other{
     display: none;
-    animation: animation .5s ease-in-out;
+}
 }
 
-.activo.tasks,
-.activo.tasks2,
-.activo.tasks3,
-.activo.tasks4,
-.activo.tasks5,
-.activo.tasks6,
-.activo.tasks7{
-    display: block;
-}
-
-
-@keyframes animation {
-    from{
-        opacity: 0;
-        transform: translate3d(80px, 0px, 0px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate3d(0px, 0px, 0px);
-    }
-}
-.tasks p,
-.tasks2 p,
-.tasks3 p,
-.tasks4 p,
-.tasks5 p,
-.tasks6 p,
-.tasks7 p{
-    max-width: 500px;
-}
-
-.tasks img,
-.tasks2 img,
-.tasks3 img,
-.tasks4 img,
-.tasks5 img,
-.tasks6 img,
-.tasks7 img{
-    width: 500px;
-    border-radius: 20px;
-    margin-top: 80px;
-}
-
-.tasks h5,
-.tasks2 h5,
-.tasks3 h5,
-.tasks4 h5,
-.tasks5 h5,
-.tasks6 h5,
-.tasks7 h5{
-    font-size: 30px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-.tasks button,
-.tasks2 button,
-.tasks3 button,
-.tasks4 button,
-.tasks5 button,
-.tasks6 button,
-.tasks7 button{
-    border: none;
-    border-radius: 50%;
-    background-color: #4D0001;
-    color: white;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 30px;
-    cursor: pointer;
-}
