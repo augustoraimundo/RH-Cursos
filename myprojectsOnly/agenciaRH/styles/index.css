@@ -35,13 +35,7 @@ header nav .menu{
     display: none;
 }
 
-.team1 h1{
-     font-size: 80px;
-     color: #ffffff;
-}
-
-.team1Sobre h1{
-     font-family: "Nunito", sans-serif;
+.team1 h1, .team1Sobre h1, .team1Contacto h1{
      font-size: 80px;
      color: #ffffff;
 }
@@ -141,19 +135,22 @@ nav ul li a{
     position: relative;
 }
 
-.team1 .txt1{
+.team1Contacto{
+    background-image: url('../assets/imagens/study-group-african-people\ \(2\).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+
+.txt1{
     font-size: 18px;
     font-weight: 200;
     color: #dfdfdf;
     margin-top: 5px;
-}
-
-.team1Sobre .txt1{
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
     margin: auto;
-    max-width: 800px;
+    max-width: 750px;
 }
 
 .botoes{
@@ -265,7 +262,7 @@ button .size-6{
 
 .team2 h2{
     color: var(--color-text);
-    font-size: 50px;
+    font-size: 35px;
     margin-bottom: 20px ;
 }
 
@@ -357,7 +354,7 @@ button .size-6{
 
 .subVision h4, .subVisions h4{
     max-width: 400px;
-    color: #323232;
+    color: #BF0B2C;
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -1126,13 +1123,15 @@ footer a{
         display: none;
     }
 
-    .team1 h1 {
-    font-size: 50px;
-  }
+.team1 h1, .team1Sobre h1, .team1Contacto h1{
+     font-size: 50px;
+     color: #ffffff;
+}
 
-    .cards > div {
-        flex-basis: 80vw;
-    }
+
+.cards > div {
+    flex-basis: 80vw;
+}
 
   .ctaSolicitas {
     width: auto;
