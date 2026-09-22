@@ -245,12 +245,17 @@ button .size-6{
     object-fit: cover;
     object-position: center center;
     border-radius: 10px;
+    object-position: top center;
+}
+.big{
+    height: 500px;
 }
 
 .short{
     position: absolute;
     left: -20%;
     bottom: -15%;
+    height: 300px;
 }
 
 .team2 h2{
@@ -871,6 +876,8 @@ footer a{
 .tasks6 img,
 .tasks7 img{
     width: 500px;
+    object-fit: cover;
+    height: 300px;
     border-radius: 20px;
     margin-top: 80px;
 }
